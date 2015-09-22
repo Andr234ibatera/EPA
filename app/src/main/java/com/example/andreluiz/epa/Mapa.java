@@ -8,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -42,9 +43,14 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng ufrr = new LatLng(2.835402, -60.694514);
-        mMap.addMarker(new MarkerOptions().position(ufrr).title("Universidade Federal de Roraima"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ufrr,17));
+        LatLng minicurso = new LatLng(2.835402, -60.694514);
+        LatLng ufrr = new LatLng(2.834083, -60.692882);
+        LatLng palestra = new LatLng(2.833998, -60.691348);
+        //mMap.addMarker(new MarkerOptions().position(ufrr).title("Universidade Federal de Roraima"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ufrr, 17));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso).title("Minicursos"));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_verd_azul)).position(palestra).title("Palestras"));
+        mMap.setMyLocationEnabled(true);
     }
 
     @Override

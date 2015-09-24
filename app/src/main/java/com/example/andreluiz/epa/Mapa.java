@@ -43,13 +43,16 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng minicurso = new LatLng(2.835402, -60.694514);
+        LatLng minicurso3 = new LatLng(2.834377, -60.695445);
+        LatLng minicurso5 = new LatLng(2.835402, -60.694514);
         LatLng ufrr = new LatLng(2.834083, -60.692882);
         LatLng palestra = new LatLng(2.833998, -60.691348);
         //mMap.addMarker(new MarkerOptions().position(ufrr).title("Universidade Federal de Roraima"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ufrr, 17));
-        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso).title("Minicursos"));
-        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_verd_azul)).position(palestra).title("Palestras"));
+        String text[] = {getString(R.string.pin_minicurso),getString(R.string.pin_palestra)};
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso3).title(text[0]));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso5).title(text[0]));
+        mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_verd_azul)).position(palestra).title(text[1]));
         mMap.setMyLocationEnabled(true);
     }
 

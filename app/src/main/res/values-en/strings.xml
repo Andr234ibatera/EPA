@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //elementos em portugues
+    <string name="hack_tema">#A cool Theme should be here#</string>
+
+    <string name="app_name">EPA!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="titulo_tema_hack">Theme</string>
+
+    <string name="tema_hack">Available from 01/10/2015</string>
+    <string name="prem_hack">Awards</string>
+    <string name="prim_prem_hack">1º place: R$ 5,000.00</string>
+    <string name="seg_prem_hack">2º place: R$ 3,000.00</string>
+    <string name="ter_prem_hack">3º place: R$ 2,000.00</string>
+    <string name="prog_main">Programming</string>
+    <string name="loc_main">Localization</string>
+    <string name="hack_main">Hackathon</string>
+    <string name="mini_main">Short Course</string>
+    <string name="insc_main">Enrollment</string>
+    <string name="titulo_placa">Titulo</string>
+    <string name="titulo_placa_prog">Programming</string>
+    <string name="toast_hack">There was a close one</string>
+    <string name="hack_erro">ERROR: it is necessary a connection to the internet</string>
+    <string name="pin_palestra">Lectures</string>
+    <string name="pin_minicurso">Short Course</string>
+
+</resources>

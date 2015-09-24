@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#dbdbdb">
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:text="@string/titulo_placa_prog"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#004860" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="#004860"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#69e2dd" />
+
+</LinearLayout>

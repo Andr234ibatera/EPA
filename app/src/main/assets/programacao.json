@@ -1,0 +1,84 @@
+{
+  "eventos" : [
+    {
+      "tipo": 1,
+      "horario" : "",
+      "titulo" : "Programação",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 2,
+      "horario" : "",
+      "titulo" : "Dia 7",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19h",
+      "titulo" : "Abertura e Mesa de honra",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19:30 h",
+      "titulo" : "Computação Social Móvel: Conceitos e Desafios",
+      "palestrante" : "Eduardo F. Nakamura",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "20:30h",
+      "titulo" : "Tendencias de Sistemas Embarcados e Internet das coisas: o que vem por aí",
+      "palestrante" : "Rubem Paulo Saldanha",
+      "descricaoIntro" : "Muito se fala hoje em dia sobre a Internet das Coisas. Para um estudante universitário, o que significa isso e o que é preciso fazer para que se manter atualizado nesses novos tópicos e estar preparado para o futuro?",
+      "descricaoFull" :"Nesse papo com estudantes, o gerente de educação da Intel Semicondutores do Brasil fala sobre essas tendências e sobre outras coisas interessantes."
+    },
+    {
+      "tipo": 2,
+      "horario" : "",
+      "titulo" : "Dia 8",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19 h",
+      "titulo" : "Cidades Inteligentes baseadas na Internet das Coisas",
+      "palestrante" : "Carlos Alberto A. Trujillo",
+      "descricaoIntro" : "Atualmente, mais de 50% da população mundial vive em áreas urbanas e estima-se que em 2050 esse valor alcance 70%. Essa alta concentração populacional traz consigo grandes desafios para as cidades em áreas como segurança, transporte, mobilidade, energia, água, saúde, meio ambiente, entre outras.",
+      "descricaoFull" :" A fim de fornecer melhores serviços e melhorar a qualidade de vida dos cidadãos, as cidades estão adotando soluções baseadas nas Tecnologias de Informação e Comunicação (TIC), viabilizando assim o conceito de Cidade Inteligente. Nesse contexto, o paradigma emergente de Internet das Coisas (IoT, Internet of Things), incluindo as comunicações Máquina-a-Máquina (M2M, Machine-to-Machine), habilita a implementação do conceito de Cidade Inteligente de uma maneira eficiente. \nEssa palestra apresentará o conceito de Cidade Inteligente sob o paradigma de IoT introduzindo os desafios de implantação, os protocolos definidos e as vantagens de sua utilização. Esse paradigma implica diretamente nas tecnologias de comunicações devido às características singulares do tráfego gerado e ao grande número de dispositivos envolvidos. Assim, soluções propostas para permitir a comunicação nesse contexto serão discutidas."
+    },
+    {
+      "tipo": 3,
+      "horario" : "20 h",
+      "titulo" : "A confirmar",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "21 h",
+      "titulo" : "Encerramento e Coffee-Break",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 4,
+      "horario" : "",
+      "titulo" : "",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    }
+  ]
+}

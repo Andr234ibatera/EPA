@@ -1,6 +1,28 @@
 <resources>
+    //elementos em portugues
+    <string name="hack_tema">alguma coisa estara aki</string>
+
     <string name="app_name">EPA!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_mapa">Map</string>
+    <string name="titulo_tema_hack">Tema</string>
+    <string name="tema_hack">Disponível a partir de 01/10/2015</string>
+    <string name="prem_hack">Premiação</string>
+    <string name="prim_prem_hack">1º Lugar: R$ 5.000,00</string>
+    <string name="seg_prem_hack">2º Lugar: R$ 3.000,00</string>
+    <string name="ter_prem_hack">3º Lugar: R$ 2.000,00</string>
+    <string name="prog_main">Programação</string>
+    <string name="loc_main">Localização</string>
+    <string name="hack_main">Hackathon</string>
+    <string name="mini_main">Minicurso</string>
+    <string name="insc_main">Inscrição</string>
+    <string name="titulo_placa">Titulo</string>
+    <string name="titulo_placa_prog">Programação</string>
+    <string name="toast_hack">Quase lá</string>
+    <string name="hack_erro">ERRO: Faz-se necessária conexão com a internet.</string>
+    <string name="pin_palestra">Palestras</string>
+    <string name="pin_minicurso">Minicursos</string>
+
+
 </resources>

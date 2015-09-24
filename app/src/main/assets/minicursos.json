@@ -1,0 +1,76 @@
+{
+  "eventos" : [
+    {
+      "tipo": 1,
+      "horario" : "",
+      "titulo" : "Minicursos",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Desenvolvimento de Jogos 2D",
+      "palestrante" : " Anny Walker e Daniel Gohl",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Desenvolvimento de Jogos 3D",
+      "palestrante" : "Dion Ribeiro",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Desenvolvimento de aplicativos para Android - Básico",
+      "palestrante" : "Adam Gurita, Rafael Sá e João Pinto",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Desenvolvimento de aplicativos para Android - Avançado",
+      "palestrante" : "Diego Nascimento e Andre Pereira",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Arduino",
+      "palestrante" : "Orlem Lima e Jó dos Santos",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Simulação em Redes Veiculares",
+      "palestrante" : "Leandro Ballico",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "",
+      "titulo" : "Introdução a Mineração de Dados com Weka",
+      "palestrante" : "Jeferson Costa da Silva",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 4,
+      "horario" : "",
+      "titulo" : "",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    }
+  ]
+}

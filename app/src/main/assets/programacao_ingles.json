@@ -1,0 +1,92 @@
+{
+  "eventos" : [
+    {
+      "tipo": 1,
+      "horario" : "",
+      "titulo" : "Programming",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 2,
+      "horario" : "",
+      "titulo" : "Day 7",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19h",
+      "titulo" : "Opening and Honor Table",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19:30h",
+      "titulo" : "Social Mobile Computing: Concepts and Challenges",
+      "palestrante" : "Eduardo F. Nakamura",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "20:30h",
+      "titulo" : "Trends of Embedded Systems and Internet of things: what comes around?",
+      "palestrante" : "Rubem Paulo Saldanha",
+      "descricaoIntro" : "Much is said these days about the Internet of Things. For a college student, what does it mean and what you need to do to stay up to date on these new topics and be prepared for the future?",
+      "descricaoFull" :"In this chat with students, the Brazil's Intel Semiconductors  education manager talks about these trends and about other interesting things."
+    },
+    {
+      "tipo": 3,
+      "horario" : "21:30h",
+      "titulo" : "Coffee-Break",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 2,
+      "horario" : "",
+      "titulo" : "Day 8",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "19h",
+      "titulo" : "Smart Cities based in Internet of Things",
+      "palestrante" : "Carlos Alberto A. Trujillo",
+      "descricaoIntro" : "Today, more than 50% of the world population lives in urban areas and it is estimated that in 2050 this figure reach 70%. This high population concentration brings great challenges for cities in areas such as security, transportation, mobility, energy,  water, health, environment, among others.",
+      "descricaoFull" :"In order to provide better service and improve the  quality of life of citizens, cities are adopting solutions based on Information and Communication Technologies (ICT), thus enabling the Smart City concept. In this context, the emerging paradigm  of Internet of Things (IoT), including communications Machine-to-Machine (M2M), enables the  implementation of the Smart City concept in an efficient manner. This lecture will present the Smart City concept under the IoT paradigm by introducing the deployment  challenges, defined protocols and advantages of their use. This paradigm involves direct communications technologies due to the unique characteristics of the generated traffic and the large number of devices involved. Thus, the proposed solutions to enable communication in  this context shall be discussed."
+    },
+    {
+      "tipo": 3,
+      "horario" : "20h",
+      "titulo" : "Waiting confirmation",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 3,
+      "horario" : "21h",
+      "titulo" : "Closing and Coffee-Break",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    },
+    {
+      "tipo": 4,
+      "horario" : "",
+      "titulo" : "",
+      "palestrante" : "",
+      "descricaoIntro" : "",
+      "descricaoFull" :""
+    }
+  ]
+}

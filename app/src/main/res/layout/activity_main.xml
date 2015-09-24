@@ -30,6 +30,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/img_cal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -42,7 +43,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Programação"
+                android:text="@string/prog_main"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -71,7 +72,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Localização"
+                android:text="@string/loc_main"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -99,7 +100,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Hackathon"
+                android:text="@string/hack_main"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -127,7 +128,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Minicurso"
+                android:text="@string/mini_main"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -155,7 +156,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Inscrição"
+                android:text="@string/insc_main"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />

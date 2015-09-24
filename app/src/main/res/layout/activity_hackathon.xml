@@ -7,7 +7,19 @@
     android:padding="5dp"
     tools:context="com.example.andreluiz.appepa.Hackathon">
 
+    <ImageView
+        android:id="@+id/img_hack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/pag_hack" />
+
+
+
     <LinearLayout
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -15,7 +27,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
 
@@ -25,91 +37,10 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Premiação"
+                android:text="@string/titulo_tema_hack"
                 android:textColor="#FFFFFF"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:clickable="false"
-                android:src="@mipmap/ic_mouse_gold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_vertical"
-                android:text="1º Lugar: R$ 5.000,00"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:clickable="false"
-                android:src="@mipmap/ic_mouse_silver" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_vertical"
-                android:text="2º Lugar: R$ 3.000,00"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:clickable="false"
-                android:src="@mipmap/ic_mouse_bronze" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_vertical"
-                android:text="3º Lugar: R$ 2.000,00"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -123,26 +54,121 @@
 
 
             <TextView
+                android:id="@+id/tx_tema"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_vertical"
-                android:text="Tema: Alguma coisa estara aqui"
+                android:text="@string/tema_hack"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="19sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="@string/prem_hack"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:src="@mipmap/golden_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="@string/prim_prem_hack"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:src="@mipmap/silver_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="@string/seg_prem_hack"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:src="@mipmap/bronze_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="@string/ter_prem_hack"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitEnd"
-        android:src="@drawable/pag_hack" />
 </RelativeLayout>

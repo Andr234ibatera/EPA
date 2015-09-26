@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
         bt_loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(getApplicationContext(), Mapa.class);
-                startActivity(i);
-                overridePendingTransition(R.layout.slide_in, R.layout.slide_out);
-                finish();
+                try {
+                    escolheMapa();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         });
         bt_hack.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +100,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void escolheMapa(){
+        SharedPreferences salvo = getPreferences(Context.MODE_PRIVATE);
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnected() || connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnected() || salvo.getBoolean("mapa", false)) {
+            SharedPreferences tema = getPreferences(MODE_PRIVATE);//entra no if se tiver intert e salva essa informacao
+            SharedPreferences.Editor editor = tema.edit();
+            editor.putBoolean("mapa", true);
+            editor.commit();
+
+            Log.i("Checou: ", "Celular com internet para mapa ou ja carregou anteriormente"+salvo.getBoolean("mapa", false));
+            Intent i = new Intent(getApplicationContext(), Mapa.class);
+            startActivity(i);
+            overridePendingTransition(R.layout.slide_in, R.layout.slide_out);
+            finish();
+        } else{
+            Log.i("Checou: ", "Celular sem internet"+salvo.getBoolean("mapa", false));
+            Intent i = new Intent(getApplicationContext(), MapaOffline.class);
+            startActivity(i);
+            overridePendingTransition(R.layout.slide_in, R.layout.slide_out);
+            finish();
+        }
     }
 
     public void trocaData() {

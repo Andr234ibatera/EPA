@@ -2,8 +2,8 @@ package com.example.andreluiz.epa;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -40,13 +40,11 @@ public class Progamacao extends AppCompatActivity {
         lvProgramacao.setAdapter(new ListProgramacaoAdapter(this, getEventosFromFile()));
     }
 
-
     @Override
-    public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(i);
-        overridePendingTransition(R.layout.out_in, R.layout.out_out);
-        finish();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.menu_progamacao, menu);
+        return true;
     }
 
     @Override
@@ -64,18 +62,26 @@ public class Progamacao extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.layout.out_in,R.layout.out_out);
+        finish();
+    }
+
     public List<Evento> getEventosFromFile() {
         List<Evento> eventos = new ArrayList<>();
         String s = null;
 
-        Log.v("EpaApp", "Lendo arquivo");
+        //Log.v("EpaApp", "Lendo arquivo");
         InputStream imputStrean = null;
         try {
 
             //Log.v("EpaApp", "Passo 1: Lendo imputStream da pasta assets");
-            if ("en".equals(Locale.getDefault().getLanguage())){
+            if ("en".equals(Locale.getDefault().getLanguage())) {
                 imputStrean = this.getAssets().open("programacao_ingles.json");
-            } else{
+            } else {
                 imputStrean = this.getAssets().open("programacao.json");
             }
             //Log.v("EpaApp", "Passo 2: Instanceando BufferedReader");
@@ -84,7 +90,7 @@ public class Progamacao extends AppCompatActivity {
             StringBuilder sb = new StringBuilder();
 
             //Log.v("EpaApp", "Passo 4: Passando iS para bR");
-            while ((s = br.readLine()) != null) {
+            while((s = br.readLine()) != null){
                 sb.append(s + "\r\n");
             }
             br.close();
@@ -101,10 +107,10 @@ public class Progamacao extends AppCompatActivity {
             JSONObject jsonObjEventos = new JSONObject(s);
             JSONArray jsonArrayEventos = jsonObjEventos.getJSONArray("eventos");
 
-            for (int i = 0; i < jsonArrayEventos.length(); i++) {
+            for(int i = 0; i < jsonArrayEventos.length(); i++){
                 JSONObject jsonObjAux = jsonArrayEventos.getJSONObject(i);
 
-                Log.v("EpaApp", i + "");
+                Log.v("EpaApp", i+"");
                 Evento evento = new Evento(jsonObjAux.getInt("tipo"),
                         jsonObjAux.getString("horario"),
                         jsonObjAux.getString("titulo"),
@@ -124,7 +130,8 @@ public class Progamacao extends AppCompatActivity {
     }
 
 
-    public class ListProgramacaoAdapter extends ArrayAdapter<Evento> {
+
+    public class ListProgramacaoAdapter extends ArrayAdapter<Evento>{
         List<Evento> eventos;
 
         public ListProgramacaoAdapter(Context context, List<Evento> objects) {
@@ -134,7 +141,7 @@ public class Progamacao extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View view, ViewGroup parent) {
+        public View getView(final int position, View view, ViewGroup parent) {
             final TextView tvTitulo;
             //TextView tvHorario;
             TextView tvPalestrante;
@@ -143,60 +150,64 @@ public class Progamacao extends AppCompatActivity {
             LinearLayout llItem;
 
             //if(view == null){
-            switch (eventos.get(position).getTipo()) {
-                case 1:
-                    Log.v("EpaApp", "Case 1: tipo " + eventos.get(position).getTipo());
-                    view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_top, parent, false);
-                    tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
-                    tvTitulo.setText(eventos.get(position).getTitulo());
-                    break;
-                case 2:
-                    Log.v("EpaApp", "Case 2: tipo " + eventos.get(position).getTipo());
-                    view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_dia, parent, false);
-                    tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
-                    tvTitulo.setText(eventos.get(position).getTitulo());
-                    break;
-                case 3:
-                    Log.v("EpaApp", "Case 3: tipo " + eventos.get(position).getTipo());
-                    view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_item, parent, false);
-                    tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
-                    tvPalestrante = (TextView) view.findViewById(R.id.tv_palestrante);
-                    tvDescricaoIntro = (TextView) view.findViewById(R.id.tv_descricao_intro);
-                    //tvDescricaoFull = (TextView) view.findViewById(R.id.tv_descricao_full);
-                    llItem = (LinearLayout) view.findViewById(R.id.ll_item);
+                switch (eventos.get(position).getTipo()){
+                    case 1:
+                        //Log.v("EpaApp", "Case 1: tipo "+eventos.get(position).getTipo());
+                        view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_top, parent, false);
+                        tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
+                        tvTitulo.setText(eventos.get(position).getTitulo());
+                        break;
+                    case 2:
+                       // Log.v("EpaApp", "Case 2: tipo "+eventos.get(position).getTipo());
+                        view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_dia, parent, false);
+                        tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
+                        tvTitulo.setText(eventos.get(position).getTitulo());
+                        break;
+                    case 3:
+                       // Log.v("EpaApp", "Case 3: tipo "+eventos.get(position).getTipo());
+                        view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_item, parent, false);
+                        tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
+                        tvPalestrante = (TextView) view.findViewById(R.id.tv_palestrante);
+                        tvDescricaoIntro = (TextView) view.findViewById(R.id.tv_descricao_intro);
+                        //tvDescricaoFull = (TextView) view.findViewById(R.id.tv_descricao_full);
+                        llItem = (LinearLayout) view.findViewById(R.id.ll_item);
 
-                    tvTitulo.setText(eventos.get(position).getHorario() + " - " + eventos.get(position).getTitulo());
-                    tvPalestrante.setText(eventos.get(position).getPalestrante());
-                    tvDescricaoIntro.setText(eventos.get(position).getDescricaoIntro() + "\n" +
-                            eventos.get(position).getDescricaoFull());
-                    //tvDescricaoFull.setText(eventos.get(position).getDescricaoFull());
-                    llItem.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            if (tvDescricaoIntro.getVisibility() == View.INVISIBLE) {
-                                tvDescricaoIntro.setVisibility(View.VISIBLE);
-                                tvDescricaoIntro.setMaxLines(Integer.MAX_VALUE);
-                                tvDescricaoIntro.setEllipsize(null);
+                        tvTitulo.setText(eventos.get(position).getHorario()+" - "+eventos.get(position).getTitulo());
+                        tvTitulo.setMaxLines(2);
+                        tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
+                        tvPalestrante.setText(eventos.get(position).getPalestrante());
+                        tvDescricaoIntro.setText(eventos.get(position).getDescricaoIntro()+"\n"+
+                                                 eventos.get(position).getDescricaoFull());
+                        //tvDescricaoFull.setText(eventos.get(position).getDescricaoFull());
+                        llItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //Log.i("Prgramacao","Linhas: "+tvTitulo.getLineCount()+" Descricao: "+eventos.get(position).getDescricaoIntro().isEmpty());
+                                if (tvTitulo.getLineCount() == 2 && tvDescricaoIntro.getVisibility() == View.INVISIBLE){
+                                    if(!(tvDescricaoIntro.getText().toString().isEmpty())){
+                                        tvDescricaoIntro.setVisibility(View.VISIBLE);
+                                        tvDescricaoIntro.setMaxLines(Integer.MAX_VALUE);
+                                        tvDescricaoIntro.setEllipsize(null);
+                                    }
+                                    tvTitulo.setMaxLines(Integer.MAX_VALUE);
+                                    tvTitulo.setEllipsize(null);
 
-                                tvTitulo.setMaxLines(Integer.MAX_VALUE);
-                                tvTitulo.setEllipsize(null);
-                                tvTitulo.setLines(3);
-                            } else {
-                                tvDescricaoIntro.setVisibility(View.INVISIBLE);
-                                tvDescricaoIntro.setMaxLines(1);
-                                tvDescricaoIntro.setEllipsize(TextUtils.TruncateAt.END);
+                                }else{
+                                    tvDescricaoIntro.setVisibility(View.INVISIBLE);
+                                    tvDescricaoIntro.setMaxLines(1);
+                                    tvDescricaoIntro.setEllipsize(TextUtils.TruncateAt.END);
 
-                                tvTitulo.setMaxLines(Integer.MAX_VALUE);
-                                tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
-                                tvTitulo.setLines(2);
+                                    tvTitulo.setMaxLines(Integer.MAX_VALUE);
+                                    tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
+                                    tvTitulo.setLines(2);
+                                }
                             }
-                        }
-                    });
-                    break;
-                case 4:
-                    view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_base, parent, false);
-                    break;
-            }
+                        });
+                        break;
+                    case 4:
+                        view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_base, parent, false);
+                        break;
+                }
             //}
 
             return view;

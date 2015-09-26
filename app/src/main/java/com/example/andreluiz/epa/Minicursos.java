@@ -2,8 +2,8 @@ package com.example.andreluiz.epa;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -41,11 +41,10 @@ public class Minicursos extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(i);
-        overridePendingTransition(R.layout.out_in, R.layout.out_out);
-        finish();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.menu_minicursos, menu);
+        return true;
     }
 
     @Override
@@ -61,6 +60,14 @@ public class Minicursos extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.layout.out_in,R.layout.out_out);
+        finish();
     }
 
     public List<Evento> getEventosFromFile() {
@@ -83,7 +90,7 @@ public class Minicursos extends AppCompatActivity {
             StringBuilder sb = new StringBuilder();
 
             //Log.v("EpaApp", "Passo 4: Passando iS para bR");
-            while ((s = br.readLine()) != null) {
+            while((s = br.readLine()) != null){
                 sb.append(s + "\r\n");
             }
             br.close();
@@ -100,10 +107,10 @@ public class Minicursos extends AppCompatActivity {
             JSONObject jsonObjEventos = new JSONObject(s);
             JSONArray jsonArrayEventos = jsonObjEventos.getJSONArray("eventos");
 
-            for (int i = 0; i < jsonArrayEventos.length(); i++) {
+            for(int i = 0; i < jsonArrayEventos.length(); i++){
                 JSONObject jsonObjAux = jsonArrayEventos.getJSONObject(i);
 
-                Log.v("EpaApp", i + "");
+                Log.v("EpaApp", i+"");
                 Evento evento = new Evento(jsonObjAux.getInt("tipo"),
                         jsonObjAux.getString("horario"),
                         jsonObjAux.getString("titulo"),
@@ -134,14 +141,14 @@ public class Minicursos extends AppCompatActivity {
         @Override
         public View getView(int position, View view, ViewGroup parent) {
             final TextView tvTitulo;
-            //TextView tvHorario;
+            TextView tvHorario;
             TextView tvPalestrante;
-            final TextView tvDescricaoIntro;
+            TextView tvDescricaoIntro;
             //TextView tvDescricaoFull;
             LinearLayout llItem;
 
             //if(view == null){
-            switch (eventos.get(position).getTipo()) {
+            switch (eventos.get(position).getTipo()){
                 case 1:
                     Log.v("EpaApp", "Case 1: tipo " + eventos.get(position).getTipo());
                     view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_top, parent, false);
@@ -149,41 +156,46 @@ public class Minicursos extends AppCompatActivity {
                     tvTitulo.setText(eventos.get(position).getTitulo());
                     break;
                 case 3:
-                    Log.v("EpaApp", "Case 3: tipo " + eventos.get(position).getTipo());
+                    Log.v("EpaApp", "Case 3: tipo "+eventos.get(position).getTipo());
                     view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_item, parent, false);
                     tvTitulo = (TextView) view.findViewById(R.id.tv_titulo);
+                    tvHorario = (TextView) view.findViewById(R.id.tv_horario);
                     tvPalestrante = (TextView) view.findViewById(R.id.tv_palestrante);
                     tvDescricaoIntro = (TextView) view.findViewById(R.id.tv_descricao_intro);
                     //tvDescricaoFull = (TextView) view.findViewById(R.id.tv_descricao_full);
                     llItem = (LinearLayout) view.findViewById(R.id.ll_item);
 
                     tvTitulo.setText(eventos.get(position).getTitulo());
-                    tvPalestrante.setText(eventos.get(position).getPalestrante());
-                    tvDescricaoIntro.setText(eventos.get(position).getDescricaoIntro() + "\n" +
-                            eventos.get(position).getDescricaoFull());
-                    //tvDescricaoFull.setText(eventos.get(position).getDescricaoFull());
-                    llItem.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            if (tvDescricaoIntro.getVisibility() == View.INVISIBLE) {
-                                tvDescricaoIntro.setVisibility(View.VISIBLE);
-                                tvDescricaoIntro.setMaxLines(Integer.MAX_VALUE);
-                                tvDescricaoIntro.setEllipsize(null);
+                    Log.i("Minicurso", "LinesCount: "+tvTitulo.getLineCount());
+                    /*if(tvTitulo.getLineCount() >= 2){
+                        tvTitulo.setLines(2);
+                        tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
 
-                                tvTitulo.setMaxLines(Integer.MAX_VALUE);
-                                tvTitulo.setEllipsize(null);
-                                tvTitulo.setLines(3);
-                            } else {
-                                tvDescricaoIntro.setVisibility(View.INVISIBLE);
-                                tvDescricaoIntro.setMaxLines(1);
-                                tvDescricaoIntro.setEllipsize(TextUtils.TruncateAt.END);
-
-                                tvTitulo.setMaxLines(Integer.MAX_VALUE);
-                                tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
-                                tvTitulo.setLines(2);
+                        llItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (tvTitulo.getLineCount() == 2) {
+                                    tvTitulo.setMaxLines(Integer.MAX_VALUE);
+                                    tvTitulo.setEllipsize(null);
+                                    tvTitulo.setLines(3);
+                                } else {
+                                    tvTitulo.setMaxLines(Integer.MAX_VALUE);
+                                    tvTitulo.setEllipsize(TextUtils.TruncateAt.END);
+                                    tvTitulo.setLines(2);
+                                }
                             }
-                        }
-                    });
+                        });
+                    }else{
+                        tvTitulo.setLines(tvTitulo.getLineCount());
+                    }*/
+                    tvHorario.setVisibility(View.VISIBLE);
+                    tvHorario.setText(eventos.get(position).getHorario()+" \n"+eventos.get(position).getDescricaoIntro());
+                    tvPalestrante.setText(eventos.get(position).getPalestrante());
+                    tvDescricaoIntro.setVisibility(View.GONE);
+//                    tvDescricaoIntro.setText(eventos.get(position).getDescricaoIntro()+"\n"+
+//                            eventos.get(position).getDescricaoFull());
+                    //tvDescricaoFull.setText(eventos.get(position).getDescricaoFull());
+
                     break;
                 case 4:
                     view = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_base, parent, false);

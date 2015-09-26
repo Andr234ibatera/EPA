@@ -18,7 +18,7 @@
     },
     {
       "tipo": 3,
-      "horario" : "19h",
+      "horario" : "19:00h",
       "titulo" : "Opening and Honor Table",
       "palestrante" : "",
       "descricaoIntro" : "",
@@ -58,7 +58,7 @@
     },
     {
       "tipo": 3,
-      "horario" : "19h",
+      "horario" : "19:00h",
       "titulo" : "Smart Cities based in Internet of Things",
       "palestrante" : "Carlos Alberto A. Trujillo",
       "descricaoIntro" : "Today, more than 50% of the world population lives in urban areas and it is estimated that in 2050 this figure reach 70%. This high population concentration brings great challenges for cities in areas such as security, transportation, mobility, energy,  water, health, environment, among others.",
@@ -66,7 +66,7 @@
     },
     {
       "tipo": 3,
-      "horario" : "20h",
+      "horario" : "20:00h",
       "titulo" : "Waiting confirmation",
       "palestrante" : "",
       "descricaoIntro" : "",
@@ -74,7 +74,7 @@
     },
     {
       "tipo": 3,
-      "horario" : "21h",
+      "horario" : "21:00h",
       "titulo" : "Closing and Coffee-Break",
       "palestrante" : "",
       "descricaoIntro" : "",

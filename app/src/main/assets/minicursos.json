@@ -10,58 +10,58 @@
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "08:00h às 12:00h - dias 07 e 08",
       "titulo" : "Desenvolvimento de Jogos 2D",
-      "palestrante" : " Anny Walker e Daniel Gohl",
-      "descricaoIntro" : "",
+      "palestrante" : "Anny Walker e Daniel Gohl",
+      "descricaoIntro" : "Laboratório de Programação",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h às 17:30h - dias 07 e 08",
       "titulo" : "Desenvolvimento de Jogos 3D",
       "palestrante" : "Dion Ribeiro",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Laboratório de Programação",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h às 17:30h - dias 07 e 08",
       "titulo" : "Desenvolvimento de aplicativos para Android - Básico",
-      "palestrante" : "Adam Gurita, Rafael Sá e João Pinto",
-      "descricaoIntro" : "",
+      "palestrante" : "Adam, Rafael e João Pinto",
+      "descricaoIntro" : "Laboratório do CCT",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "08:00h às 12:00h - dias 07 e 08",
       "titulo" : "Desenvolvimento de aplicativos para Android - Avançado",
-      "palestrante" : "Diego Nascimento e Andre Pereira",
-      "descricaoIntro" : "",
+      "palestrante" : "Diego Nascimento e André Pereira",
+      "descricaoIntro" : "Laboratório do CCT",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h às 17:30h - dias 07 e 08",
       "titulo" : "Arduino",
-      "palestrante" : "Orlem Lima e Jó dos Santos",
-      "descricaoIntro" : "",
+      "palestrante" : "Jó dos Santos e Orlem Lima",
+      "descricaoIntro" : "Laboratório da 312",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h às 17:30h - dias 07 e 08",
       "titulo" : "Simulação em Redes Veiculares",
       "palestrante" : "Leandro Ballico",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Laboratório de Redes",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
-      "titulo" : "Introdução a Mineração de Dados com Weka",
+      "horario" : "08:00h às 12:00h - dias 07 e 08",
+      "titulo" : "Introdução a Mineração de Dados com weka",
       "palestrante" : "Jeferson Costa da Silva",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Laboratório de Redes",
       "descricaoFull" :""
     },
     {

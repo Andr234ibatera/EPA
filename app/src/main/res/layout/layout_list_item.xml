@@ -23,19 +23,17 @@
             android:textStyle="bold"
             android:textColor="#fff"
             android:textSize="18sp"
-            android:text="hora - Titulo"
-            android:lines="2"
-            android:maxLines="2"
-            android:ellipsize="end"/>
+            android:text="hora - Titulo" />
 
-        <!--<TextView
+        <TextView
             android:id="@+id/tv_horario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2.5dp"
             android:textColor="#fff"
             android:textStyle="bold"
-            android:text="horario"/>-->
+            android:text="horario"
+            android:visibility="gone"/>
 
         <TextView
         android:id="@+id/tv_palestrante"

@@ -3,6 +3,8 @@ package com.example.andreluiz.epa;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,13 +17,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Mapa extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    ProgressBar barra;
     //chave do maps AIzaSyBrIwlEAq46A-oPRLOWirulVnDLIfo_6rM
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
+        barra = (ProgressBar) findViewById(R.id.progressBar);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -45,15 +48,16 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         LatLng minicurso3 = new LatLng(2.834377, -60.695445);
         LatLng minicurso5 = new LatLng(2.835402, -60.694514);
-        LatLng ufrr = new LatLng(2.834083, -60.692882);
+        LatLng ufrr = new LatLng(2.833946, -60.693431);
         LatLng palestra = new LatLng(2.833998, -60.691348);
-        //mMap.addMarker(new MarkerOptions().position(ufrr).title("Universidade Federal de Roraima"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ufrr, 17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ufrr, 16));
         String text[] = {getString(R.string.pin_minicurso),getString(R.string.pin_palestra)};
         mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso3).title(text[0]));
         mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_azul_azul)).position(minicurso5).title(text[0]));
         mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pin_verd_azul)).position(palestra).title(text[1]));
         mMap.setMyLocationEnabled(true);
+
+        barra.setVisibility(View.GONE);
     }
 
     @Override

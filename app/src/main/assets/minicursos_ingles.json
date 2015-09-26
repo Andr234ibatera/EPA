@@ -10,58 +10,58 @@
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "08:00h to 12:00h - days 07 and 08",
       "titulo" : "2D games development",
       "palestrante" : " Anny Walker and Daniel Gohl",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Coding Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h to 17:30h - days 07 and 08",
       "titulo" : "3D games development",
       "palestrante" : "Dion Ribeiro",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Coding Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h to 17:30h - days 07 and 08",
       "titulo" : "Android Applications development - Basic",
       "palestrante" : "Adam Gurita, Rafael Sá and João Pinto",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "CCT Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "08:00h to 12:00h - days 07 and 08",
       "titulo" : "Android Applications development - Advanced",
       "palestrante" : "Diego Nascimento and Andre Pereira",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "CCT Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h to 17:30h - days 07 and 08",
       "titulo" : "Arduino",
       "palestrante" : "Orlem Lima and Jó dos Santos",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "312 Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "13:30h to 17:30h - days 07 and 08",
       "titulo" : "Simulation in vehicle networks",
       "palestrante" : "Leandro Ballico",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Networks Lab",
       "descricaoFull" :""
     },
     {
       "tipo": 3,
-      "horario" : "",
+      "horario" : "08:00h to 12:00h - days 07 and 08",
       "titulo" : "Introduction to data mining with Weka",
       "palestrante" : "Jeferson Costa da Silva",
-      "descricaoIntro" : "",
+      "descricaoIntro" : "Networks Lab",
       "descricaoFull" :""
     },
     {
